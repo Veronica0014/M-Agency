@@ -16,6 +16,5 @@ const mobileBtn = document.getElementById("mobile-cta");
 
 
 
-      // SLICK
-
+// have a nice day par
 

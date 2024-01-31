@@ -47,24 +47,31 @@ body {
 
 .header {
 	background: #f3f3fe;
-	padding: 3rem;
-
-	&__logo {
-		text-decoration: none;
-		font-weight: bold;
-		color: black;
-		font-size: 1.2em;
-		span {
-			color: $primary-color;
-		}
-	}
-	.wrapper {
+	padding: 0;
+	&__container {
+		padding: 3rem;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		flex-direction: row;
+		margin: 0 auto;
+		max-width: 1200px;
 	}
+	&__logo {
+		a {
+			text-decoration: none;
+			font-weight: bold;
+			color: black;
+			font-size: 2.5rem;
+			span {
+				color: $primary-color;
+			}
+		}
+	}
+
 	&__icon {
 		cursor: pointer;
+		width: 4rem;
 	}
 }
 
@@ -75,9 +82,11 @@ body {
 	width: 66%;
 	right: 0;
 	top: 0;
-	background: #20272e;
+	background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(243, 243, 254, 1) 100%);
 	height: 100vh;
-	padding: 1em;
+	padding-right: 2em;
+	padding-top: 1rem;
+	box-shadow: 5px 5px 13px 0px rgba(0, 0, 0, 0.35);
 
 	&__primary {
 		margin-top: 5em;
@@ -87,15 +96,19 @@ body {
 		list-style: none;
 		li {
 			a {
-				color: white;
+				color: #241c15;
 				text-decoration: none;
 				display: block;
 				padding: 0.5em;
 				font-size: 1.3em;
 				text-align: right;
-
+				cursor: pointer;
 				&:hover {
 					font-weight: bold;
+					color: $primary-color;
+				}
+				&:active {
+					color: $primary-color;
 				}
 			}
 		}
@@ -104,6 +117,8 @@ body {
 		float: right;
 		margin: 0.5em;
 		cursor: pointer;
+		width: 2rem;
+		margin-top: 3rem;
 	}
 }
 
@@ -119,8 +134,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	padding-top: 2rem;
-	// background-color: #F3F3FE;
-	background: rgb(255, 255, 255);
+
 	background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(243, 243, 254, 1) 100%);
 
 	&__top-par {
@@ -174,12 +188,12 @@ body {
 		border: none;
 	}
 	&__image {
-		width: 100vw;
 		display: flex;
 		justify-content: center;
-		max-width: 1200px;
+		max-width: 650px;
+
 		img {
-			width: 86%;
+			width: 100%;
 		}
 	}
 }
@@ -464,10 +478,6 @@ button.slick-arrow {
 button.slick-disabled {
 	opacity: 0.6;
 }
-// .slider-element, .slick-slide, .slick-current{
-// 	margin: 2rem;
-// 	max-width: 28rem;
-// }
 
 ///////// BLOG
 
@@ -546,7 +556,7 @@ button.slick-disabled {
 
 .cooperation {
 	background-color: #f8f8f8;
-	padding: 4.5rem 2rem 4rem 2rem;
+	padding: 4.5rem 2rem 4.5rem 2rem;
 	margin: 2rem 0 0 0;
 	&__title {
 		text-align: center;
@@ -563,7 +573,6 @@ button.slick-disabled {
 		font-size: 2rem;
 		line-height: 2.6rem;
 		font-weight: 300;
-		margin: 2rem 0;
 		text-align: center;
 	}
 }
@@ -624,7 +633,7 @@ button.slick-disabled {
 	}
 	&__bottom-par {
 		font-size: 1.9rem;
-		margin: 4rem auto 4rem auto;
+		margin: 4rem auto 3rem auto;
 		text-align: center;
 		span {
 			font-size: 3.5rem;
@@ -646,78 +655,24 @@ button.slick-disabled {
 	.padding {
 		padding: 2.5rem 3rem;
 	}
+
 	.header {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		padding: 3rem 6rem;
-		&__title {
-			font-size: 5.1rem;
+		&__logo {
+			a {
+				font-size: 3.5rem;
+			}
 		}
+
 		&__icon {
-			display: none;
+			width: 5rem;
 		}
 		.nav {
-			display: flex;
-			align-items: center;
-			justify-content: flex-end;
-			background: none;
-			position: unset;
-			height: auto;
-			width: 100%;
-			padding: 0;
-			&__exit {
-				display: none;
-			}
-
-			ul {
-				display: flex;
-				li {
-					margin: 0px 7px 0px 7px;
-					a {
-						font-size: 1em;
-						&:hover {
-							font-weight: normal;
-						}
-					}
-				}
-			}
-			li.active {
-				a {
-					font-weight: bold;
-					color: $primary-color;
-					&:hover {
-						font-weight: bold;
-					}
-				}
-			}
-
-			&__primary {
-				margin: 0;
-				a {
-					color: black;
-				}
-			}
-
-			&__premium-cta {
-				&--blue {
-					color: $primary-color;
-				}
-				a {
-					background: $primary-color;
-					color: white;
-					padding: 14px 27px 14px 27px;
-					font-weight: bold;
-					border-radius: 5em;
-					margin-top: -0.2em;
-					transition: box-shadow 0.3s ease-in, font-weight 0.3s ease-in;
-
-					&:hover {
-						box-shadow: 5px 5px 13px 0px rgba(0, 0, 0, 0.35);
-						font-weight: bold;
-					}
-				}
-			}
+			width: 44%;
+		}
+	}
+	.hero {
+		&__title {
+			font-size: 5.1rem;
 		}
 	}
 	.offer {
@@ -773,34 +728,14 @@ button.slick-disabled {
 		flex-direction: column;
 		margin: 1rem auto;
 		&__title {
-			margin: 2rem auto;
+			margin: 2rem auto 0 auto;
 		}
 		&__par {
-			margin: 2rem auto;
+			padding-top: 1rem;
+			padding-bottom: 1rem;
 		}
 	}
-	.footer {
-		&__columns {
-			display: flex;
-			flex-direction: row;
-		}
-		&__column {
-			// flex-grow: 1;
-			// flex-basis: 1;
-			margin-right: 4rem;
-			flex: 1 1 0px;
-			&:nth-child(1) {
-				flex-grow: 2;
-			}
-			&:last-child {
-				margin-right: 0;
-			}
-		}
-	
-	&__bottom-par {
-		margin: 1rem auto 3.5rem auto;
-	}
-	}
+
 	hr {
 		display: block;
 		height: 1px;
@@ -808,16 +743,106 @@ button.slick-disabled {
 		border-top: 1px solid #ccc;
 		margin: 1em 0;
 		padding: 0;
-	  }
+	}
+	.footer {
+		&__bottom-par {
+			margin: 4rem auto 1rem auto;
+		}
+	}
 }
 
 @media (min-width: 992px) {
 	.padding {
-		padding: 2.5rem 6rem;
+		padding: 2.5rem 3rem;
+	}
+
+	.header {
+		
+		padding-top: 3rem;
+		&__container {
+			
+			max-width: 1200px;
+		
+		}
+		&__title {
+			font-size: 5.1rem;
+		}
+		&__icon {
+			display: none;
+			font-size: 5rem;
+		}
+		.nav {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			background: none;
+			position: unset;
+			height: auto;
+			width: 100%;
+			padding: 0;
+			box-shadow: none;
+			&__exit {
+				display: none;
+			}
+
+			ul {
+				display: flex;
+				li {
+					margin: 0px 7px 0px 7px;
+					a {
+						font-size: 1em;
+						&:hover {
+							font-weight: normal;
+						}
+					}
+				}
+			}
+			li.active {
+				a {
+					font-weight: bold;
+					color: $primary-color;
+					&:hover {
+						font-weight: bold;
+					}
+				}
+			}
+
+			&__primary {
+				margin: 0;
+				a {
+					color: black;
+				}
+			}
+
+			&__premium-cta {
+				&--blue {
+					color: $primary-color;
+				}
+				a {
+					background: $primary-color;
+					color: white;
+					padding: 14px 27px 14px 27px;
+					font-weight: bold;
+					border-radius: 5em;
+					margin-top: -0.2em;
+					transition: box-shadow 0.3s ease-in, font-weight 0.3s ease-in;
+
+					&:hover {
+						box-shadow: 5px 5px 13px 0px rgba(0, 0, 0, 0.35);
+						font-weight: bold;
+					}
+				}
+			}
+		}
 	}
 	.hero {
 		display: flex;
 		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		// padding: 0;
+		padding-top: 2.5rem;
+		width: 100%;
 		&__text-container {
 			margin: 1rem auto;
 			display: flex;
@@ -844,6 +869,18 @@ button.slick-disabled {
 			// align-items: flex-start;
 		}
 	}
+	.offer{
+		
+		&__element{
+			width: 23%;
+
+		}
+	}
+	.info{
+		&__image{
+			width: 40%;
+		}
+	}
 	.cloud {
 		overflow: hidden;
 		&__box-text {
@@ -861,6 +898,28 @@ button.slick-disabled {
 			&-par {
 				width: 40%;
 			}
+		}
+	}
+	.footer {
+		&__columns {
+			display: flex;
+			flex-direction: row;
+		}
+		&__column {
+			// flex-grow: 1;
+			// flex-basis: 1;
+			margin-right: 4rem;
+			flex: 1 1 0px;
+			&:nth-child(1) {
+				flex-grow: 2;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		&__bottom-par {
+			margin: 1rem auto 2rem auto;
 		}
 	}
 }
