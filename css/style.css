@@ -582,7 +582,7 @@ button.slick-disabled {
 
 .cooperation {
   background-color: #f8f8f8;
-  padding: 4.5rem 2rem 4.5rem 2rem;
+  padding: 4.5rem 3rem 4.5rem 3rem;
   margin: 2rem 0 0 0;
 }
 .cooperation__title {
@@ -659,14 +659,16 @@ button.slick-disabled {
   margin: 4rem auto 3rem auto;
   text-align: center;
 }
-.footer__bottom-par span {
+.footer__bottom-par__bottom-par {
   font-size: 3.5rem;
   margin-bottom: 2rem;
+}
+.footer__bottom-emoji {
+  font-size: 4rem;
 }
 .footer__bottom-text {
   margin: 1rem auto;
   text-align: center;
-  text-transform: uppercase;
 }
 .footer__bottom-text span {
   text-align: center;
@@ -683,7 +685,12 @@ button.slick-disabled {
     width: 5rem;
   }
   .header .nav {
-    width: 44%;
+    width: 40%;
+    padding-right: 3em;
+    padding-top: 2rem;
+  }
+  .header .nav__primary {
+    margin-top: 6em;
   }
   .hero__title {
     font-size: 5.1rem;

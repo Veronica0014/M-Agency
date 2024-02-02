@@ -286,11 +286,7 @@ body {
 		@include btn;
 		margin-top: 2rem;
 	}
-	// &__text {
-	// 	// width: 48%;
-	// }
 	&__image {
-		// max-width: 48%;
 		img {
 			width: 100%;
 			&:first-child {
@@ -430,7 +426,6 @@ body {
 			border: none;
 			font-weight: 800;
 			font-size: 1.6rem;
-			// margin-top: 1.8rem;
 			padding: 1.8rem 0;
 			cursor: pointer;
 		}
@@ -536,7 +531,6 @@ button.slick-disabled {
 			font-weight: 800;
 			font-size: 1.6rem;
 			text-decoration: none;
-			// padding: 1.8rem 0;
 			cursor: pointer;
 			margin-top: 4rem;
 		}
@@ -556,7 +550,7 @@ button.slick-disabled {
 
 .cooperation {
 	background-color: #f8f8f8;
-	padding: 4.5rem 2rem 4.5rem 2rem;
+	padding: 4.5rem 3rem 4.5rem 3rem;
 	margin: 2rem 0 0 0;
 	&__title {
 		text-align: center;
@@ -615,7 +609,6 @@ button.slick-disabled {
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
-		// align-items: flex-start;
 	}
 	&__contact {
 		display: flex;
@@ -635,16 +628,18 @@ button.slick-disabled {
 		font-size: 1.9rem;
 		margin: 4rem auto 3rem auto;
 		text-align: center;
-		span {
+		&__bottom-par {
 			font-size: 3.5rem;
 			margin-bottom: 2rem;
 		}
+	}
+	&__bottom-emoji {
+		font-size: 4rem;
 	}
 
 	&__bottom-text {
 		margin: 1rem auto;
 		text-align: center;
-		text-transform: uppercase;
 		span {
 			text-align: center;
 		}
@@ -667,7 +662,12 @@ button.slick-disabled {
 			width: 5rem;
 		}
 		.nav {
-			width: 44%;
+			width: 40%;
+			padding-right: 3em;
+			padding-top: 2rem;
+			&__primary {
+				margin-top: 6em;
+			}
 		}
 	}
 	.hero {
@@ -757,12 +757,9 @@ button.slick-disabled {
 	}
 
 	.header {
-		
 		padding-top: 3rem;
 		&__container {
-			
 			max-width: 1200px;
-		
 		}
 		&__title {
 			font-size: 5.1rem;
@@ -869,15 +866,13 @@ button.slick-disabled {
 			// align-items: flex-start;
 		}
 	}
-	.offer{
-		
-		&__element{
+	.offer {
+		&__element {
 			width: 23%;
-
 		}
 	}
-	.info{
-		&__image{
+	.info {
+		&__image {
 			width: 40%;
 		}
 	}
@@ -906,8 +901,6 @@ button.slick-disabled {
 			flex-direction: row;
 		}
 		&__column {
-			// flex-grow: 1;
-			// flex-basis: 1;
 			margin-right: 4rem;
 			flex: 1 1 0px;
 			&:nth-child(1) {
