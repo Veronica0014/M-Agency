@@ -14,28 +14,32 @@
 		<title>Monday Agency</title>
 	</head>
 	<body>
-		<header class="header ">
-			<div class="wrapper ">
-				<a class="header__logo" href="#">Monday<span>Agency</span></a>
+		<header>
+			<div class="header ">
+				<div class="header__container padding">
+					<div class="header__logo">
+						<a href="#">Monday<span>Agency</span></a>
+					</div>
 
-				<!-- Mobile menu -->
-				<img src="./src/icons/menu.svg" alt="Open navigation" class="header__icon" id="mobile-cta" />
+					<!-- Mobile menu -->
+					<img src="./src/icons/menu.svg" alt="Open navigation" class="header__icon" id="mobile-cta" />
 
-				<!-- Desktop menu -->
-				<nav class="nav">
-					<img src="./src/icons/exit.svg" alt="Close navigation" class="nav__exit" id="mobile-exit" />
-					<ul class="nav__primary">
-						<li class="active"><a href="#">Home</a></li>
-						<li><a href="#">Projekty</a></li>
-						<li><a href="#">Oferta</a></li>
-						<li><a href="#">O nas</a></li>
-						<li><a href="#">Kontakt</a></li>
-					</ul>
+					<!-- Desktop menu -->
+					<nav class="nav">
+						<img src="./src/icons/exit.svg" alt="Close navigation" class="nav__exit" id="mobile-exit" />
+						<ul class="nav__primary">
+							<li class="active"><a href="#">Home</a></li>
+							<li><a href="#">Projekty</a></li>
+							<li><a href="#">Oferta</a></li>
+							<li><a href="#">O nas</a></li>
+							<li><a href="#">Kontakt</a></li>
+						</ul>
 
-					<ul class="nav__secondary">
-						<li class="nav__premium-cta"><a class="nav__premium-cta--blue" href="#">Wycena</a></li>
-					</ul>
-				</nav>
+						<ul class="nav__secondary">
+							<li class="nav__premium-cta"><a class="nav__premium-cta--blue" href="#">Wycena</a></li>
+						</ul>
+					</nav>
+				</div>
 			</div>
 		</header>
 
@@ -46,7 +50,7 @@
 						<div class="hero__text-container">
 							<div class="hero__top-par wrapper">
 								<img src="/src/icons/hand-shake.png" alt="hand shake icon" />
-								<p>Cześć, miłego poniedziałku!</p>
+								<p class="hello-par">Cześć, miłego <span class="hello-change">poniedziałku</span>!</p>
 							</div>
 							<h1 class="hero__title wrapper">Razem budujemy internet <span>strona po stronie</span></h1>
 							<p class="hero__bottom-par wrapper">
@@ -59,7 +63,7 @@
 						</div>
 
 						<div class="hero__image">
-							<img src="/src/images/hero.png" alt="" />
+							<img src="/src/images/hero.png" alt="computer picture" />
 						</div>
 					</div>
 				</div>
@@ -108,6 +112,21 @@
 			</section>
 
 			<section class="wrapper padding">
+				<div class="info info--reverse">
+					<div class="info__text info__text--reverse">
+						<h3>Pomagamy</h3>
+
+						<p class="info__par">Wizualny edytor treści</p>
+						<p class="info__description">
+							Skorzystaj z naszej oferty i zobacz jak łatwe i przyjemne może być tworzenie i edycja Twojej strony
+							internetowej oraz sklepu online.
+						</p>
+						<button class="info__btn">Czytaj więcej</button>
+					</div>
+					<div class="info__image">
+						<img src="/src/images/pomagamy.png" alt="" />
+					</div>
+				</div>
 				<div class="info">
 					<div class="info__text">
 						<h3>Edytuj co chcesz</h3>
@@ -153,21 +172,7 @@
 						<img src="/src/images/indywidualny-projekt-graficzny.png" alt="" />
 					</div>
 				</div>
-				<div class="info info--reverse">
-					<div class="info__text info__text--reverse">
-						<h3>Pomagamy</h3>
-
-						<p class="info__par">Wizualny edytor treści</p>
-						<p class="info__description">
-							Skorzystaj z naszej oferty i zobacz jak łatwe i przyjemne może być tworzenie i edycja Twojej strony
-							internetowej oraz sklepu online.
-						</p>
-						<button class="info__btn">Czytaj więcej</button>
-					</div>
-					<div class="info__image">
-						<img src="/src/images/pomagamy.png" alt="" />
-					</div>
-				</div>
+				
 			</section>
 			<section class="cloud wrapper padding">
 				<div class="cloud__box">
@@ -193,10 +198,6 @@
 					<button class="projects__btn btn">Zobacz wszystko</button>
 				</div>
 				<div class="projects__slider">
-					<!-- <div class="projects__slider-arrows">
-						<img class="projects__slider-arrows-left" src="/src/icons/Arrow-2.svg" alt="arrow left icon" />
-						<img class="projects__slider-arrows-right" src="/src/icons/Arrow-3.svg" alt="arrow right icon" />
-					</div> -->
 					<div class="btn-wrap">
 						<button class="prev-btn arrow-btn"></button>
 						<button class="next-btn arrow-btn"></button>
@@ -311,12 +312,19 @@
 							<a href="#" class="blog__post-link">Zobacz post</a>
 						</div>
 					</div>
+					<div class="blog__post">
+						<div class="blog__post-image blog__post-image--sec"></div>
+						<div class="blog__post-text">
+							<h4 class="blog__post-title">Elementor Pro – Zalety korzystania z wizualnego edytora</h4>
+							<a href="#" class="blog__post-link">Zobacz post</a>
+						</div>
+					</div>
 				</div>
-				<div class="blog__btn-container"></div>
+				<div class="blog__btn-container"><button class="blog__btn">Zobacz wszystko</button></div>
 			</section>
-			<section class="cooperation ">
+			<section class="cooperation">
 				<h3 class="cooperation__title wrapper">Nie możemy się doczekać współpracy <span>z Tobą</span></h3>
-				<p class="cooperation__par wrapper padding">
+				<p class="cooperation__par wrapper">
 					Zobacz co inni mówią o naszej współpracy i dołącz do grona zadowolonych klientów. Skontaktuj się z nami już
 					dziś, by rozpocząć wspólną drogę do sukcesu!
 				</p>
@@ -362,11 +370,9 @@
 					<a href="#">Wycena</a>
 				</div>
 			</div>
-			<p class="footer__bottom-par"><span>🙂</span><br />Życzymy Ci miłego poniedziałku!</p>
-			<!-- <div class="footer__divider"></div>
+			<p class="footer__bottom-par "><span class="footer__bottom-emoji">🙂</span ><br />Życzymy Ci miłego <span class="footer__bottom-par hello-change">poniedziałku</span>!</p>
 			
-		 -->
-		 <hr>
+			<hr />
 			<p class="footer__bottom-text">&copy; <span class="footer__year"></span> 2024 MondayAgency</p>
 		</footer>
 
